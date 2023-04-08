@@ -1,0 +1,73 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+p,
+label,
+a,
+span {
+    font-size: 12px;
+    color: #393939;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    margin-left: 300px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-left: 2px solid rgb(57, 57, 57);
+    color: rgb(58, 58, 58);
+}
+
+.dashboard-card h1 {
+    font-weight: 800;
+}
+
+.dash-icon-bg {
+    background-color: rgb(57, 57, 57);
+}
+
+.error-card {
+    border-radius: 10px;
+    background-color: rgb(255, 58, 98);
+    color: white;
+}
+
+.error-card p {
+    color: white;
+}
