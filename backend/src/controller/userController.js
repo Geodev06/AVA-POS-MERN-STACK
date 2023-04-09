@@ -23,14 +23,16 @@ const signup = async (req, res) => {
 
             const user = await User.create({ name, email, password })
 
+            const token = createToken(user._id)
+
             return res.status(200)
-                .json({ user })
+                .json({ name, email, token })
         }
-        res.status(401)
+        res.status(400)
             .json({ error: 'Email already exists' })
 
     } catch (err) {
-        res.status(401)
+        res.status(400)
             .json({ error: err.message })
     }
 }
@@ -49,11 +51,11 @@ const login = async (req, res) => {
             const token = createToken(user._id)
 
             res.status(200)
-                .json({ user, token })
+                .json({ name: user.name, email, token })
         }
 
     } catch (err) {
-        res.status(401)
+        res.status(400)
             .json({ error: err.message })
     }
 }

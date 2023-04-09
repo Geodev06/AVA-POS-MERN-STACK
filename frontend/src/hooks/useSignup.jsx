@@ -25,8 +25,8 @@ export const useSignup = () => {
             }
         }).then((data) => {
 
-            localStorage.setItem('user', JSON.stringify(data.data.user))
-            dispatch({ type: 'LOGIN', payload: data.data.user })
+            localStorage.setItem('user', JSON.stringify(data.data))
+            dispatch({ type: 'LOGIN', payload: data.data })
             setisSuccess(true)
             setisLoading(false)
         }).catch(err => {

@@ -40,7 +40,9 @@ const Login = () => {
                                 </div>
 
                                 <div className="col-lg-12 mb-3">
-                                    <button className="btn btn-alt-dark text-white fw-bold w-100 d-flex align-items-center justify-content-center">
+                                    <button
+                                        disabled={isLoading}
+                                        className="btn btn-alt-dark text-white fw-bold w-100 d-flex align-items-center justify-content-center">
                                         <i className='bx bx-log-in mx-1'></i>
                                         Log in
                                     </button>

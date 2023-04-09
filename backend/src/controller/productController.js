@@ -17,7 +17,7 @@ const index = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
     }
 }
 
@@ -31,7 +31,7 @@ const show = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
 
     }
 }
@@ -50,7 +50,7 @@ const store = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
 
     }
 }
@@ -67,7 +67,7 @@ const edit = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
 
     }
 }
@@ -96,7 +96,7 @@ const update = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
 
     }
 }
@@ -112,7 +112,7 @@ const destroy = async (req, res) => {
 
     } catch (err) {
 
-        res.status(500).json({ err: err.message })
+        res.status(400).json({ err: err.message })
 
     }
 }

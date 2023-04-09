@@ -22,13 +22,12 @@ export const useLogin = () => {
             }
         }).then((data) => {
 
-            localStorage.setItem('user', JSON.stringify(data.data.user))
+            localStorage.setItem('user', JSON.stringify(data.data))
 
-            dispatch({ type: 'LOGIN', payload: data.data.user })
+            dispatch({ type: 'LOGIN', payload: data.data })
 
             setisLoading(false)
 
-            window.location.replace('/login')
         }).catch(err => {
             setError(err.response.data.error)
             setisLoading(false)
