@@ -8,13 +8,18 @@ import { BrowserRouter } from 'react-router-dom'
 import './assets/js/bootstrap.bundle.js'
 
 import { AuthContextProvider } from './context/AuthContext'
+import { CategoryContextProvider } from './context/CategoryContext'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
-        <App />
+        <CategoryContextProvider>
+          <App />
+
+        </CategoryContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>,

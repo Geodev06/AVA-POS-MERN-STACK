@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Error from '../../components/Error'
+import MessageAlert from '../../components/MessageAlert';
 
 import { useSignup } from '../../hooks/useSignup'
 
@@ -30,7 +30,7 @@ const Signup = () => {
                         <p className="text-center">Please complete the form to continue</p>
 
                         {
-                            error && <Error msg={error} />
+                            error && <MessageAlert msg={error} type={'error'} />
                         }
 
                         <form action="" onSubmit={handleSubmit}>

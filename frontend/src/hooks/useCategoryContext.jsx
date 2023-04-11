@@ -1,10 +1,10 @@
-import { AuthContext } from "../context/AuthContext"
 
 import { useContext } from "react"
+import { CategoryContext } from "../context/CategoryContext"
 
-export const useAuthContext = () => {
+export const useCategoryContext = () => {
 
-    const context = useContext(AuthContext)
+    const context = useContext(CategoryContext)
 
     if (!context) {
         throw Error('context must be inside the context provider')

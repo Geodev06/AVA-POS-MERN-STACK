@@ -72,6 +72,16 @@ span {
     color: white;
 }
 
+.success-card {
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.success-card p {
+    color: white;
+}
+
 
 /* The custom-modal (background) */
 .custom-modal {
@@ -142,4 +152,69 @@ span {
     .custom-modal-content {
         width: 80%;
     }
+}
+
+@media screen and (max-width: 420px) {
+    #sb {
+        display: hidden;
+    }
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+
+thead {
+    font-weight: 700;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+th,
+td {
+    font-size: 12px;
+    text-align: left;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+td i {
+
+    padding: 2px;
+    border-radius: 100%;
+    background-color: #d0cece;
+    color: rgb(61, 61, 61);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

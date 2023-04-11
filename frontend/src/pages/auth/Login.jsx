@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLogin } from "../../hooks/useLogin";
-import Error from "../../components/Error";
+import MessageAlert from "../../components/MessageAlert";
 const Login = () => {
 
     const [email, setEmail] = useState('')
@@ -25,7 +25,7 @@ const Login = () => {
                         <form action="" onSubmit={handleSubmit}>
 
                             {
-                                error && <Error msg={error} />
+                                error && <MessageAlert msg={error} type={'error'} />
                             }
 
                             <div className="row">

@@ -5,8 +5,7 @@ import { useLogout } from "../hooks/useLogout";
 
 const Sidebar = () => {
 
-    const { user } = useAuthContext()
-
+    const user = JSON.parse(localStorage.getItem('user'))
     const NavLink = ({ to, children, props }) => {
         const resolvepath = useResolvedPath(to)
         const isActive = useMatch({ path: resolvepath.pathname, end: true })
@@ -33,7 +32,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar" style={style}>
+            <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar" style={style} id="sb">
                 <div className="d-flex flex-column m-0 p-3">
                     <p href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span className="fs-4 text-white fw-bold">|Dashboard</span>

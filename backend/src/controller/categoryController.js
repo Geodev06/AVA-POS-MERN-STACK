@@ -104,7 +104,7 @@ const update = async (req, res) => {
 const destroy = async (req, res) => {
     try {
 
-        const category = await Category.deleteOne({ _id: req.params.id })
+        const category = await Category.findOneAndDelete({ _id: req.params.id })
 
         res.status(200)
             .json({ category })
